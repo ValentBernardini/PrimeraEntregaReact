@@ -1,12 +1,15 @@
 import Item from '../Item/Item'
-
- export const ItemList = ({productList = []}) => {
-  return(
-     productList.map((data) =>
-     <Item key={data.id} product={data}/>
-     )
-  );
- }
+import './itemList.css'
 
 
+export const ItemList = ({productList = []}) => {
+   return (
+     <div className="ItemList">
+       {productList.map((data) => (
+         <Item key={data.id} product={data} />
+       ))}
+     </div>
+   );
+ };
+ 
 
